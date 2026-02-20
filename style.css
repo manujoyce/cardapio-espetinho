@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+.logo {
+    width: 150px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #ff1a1a;
+}
+
+h2 {
+    border-bottom: 2px solid #ff1a1a;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0;
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: 0.2s ease;
+}
+
+.item:hover {
+    transform: translateY(-3px);
+}
+
+.descricao {
+    font-size: 13px;
+    color: #ccc;
+    margin-top: 5px;
+}
+
+.controls button {
+    background: linear-gradient(145deg, #ff1a1a, #cc0000);
+    border: none;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.controls button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #ff0000;
+}
+
+.controls button:active {
+    transform: scale(0.9);
+}
+
+.total {
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: right;
+    color: #00ff88;
+}
+
+.cliente input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+.btn-whatsapp {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background: linear-gradient(145deg, #25D366, #1ebe5d);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-whatsapp:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px #25D366;
+}
+
+/* Jantinha */
+
+.btn-jantinha {
+    margin-top: 10px;
+    background: linear-gradient(135deg, #ff0000, #b30000);
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+}
+
+.btn-jantinha:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(255, 0, 0, 0.5);
+}
+
+.btn-jantinha:active {
+    transform: scale(0.97);
+}
+
+.jantinha-item {
+    border: 2px solid #ff2a2a;
+    border-radius: 14px;
+    padding: 14px;
+    margin-top: 12px;
+    background: #0f0f0f;
+}
+
+.jantinha-item strong {
+    color: #fff;
+    font-size: 16px;
+}
+
+.jantinha-item select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 8px;
+    border: none;
+    background: #1c1c1c;
+    color: white;
+}
+
+/* Botão remover bonito */
+.btn-remover {
+    margin-top: 10px;
+    padding: 10px 18px;
+    border-radius: 25px;
+    border: none;
+    background: #ff1f1f;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn-remover:hover {
+    background: #ff3b3b;
+    transform: scale(1.06);
+}
+
+/* Responsivo para celular */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    .item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .controls {
+        margin-top: 10px;
+    }
+}

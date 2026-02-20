@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Espetinhos Fogo & Brasa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <img src="assets/logo-espeto.jpeg" class="logo">
+
+    <h1>Espetinhos Fogo & Brasa</h1>
+
+    <h2>Espetos</h2>
+    <div id="menu"></div>
+
+    <h2>Porções</h2>
+    <div id="porcoes"></div>
+
+    <h2>Jantinha</h2>
+    <div id="jantinha-container"></div>
+
+    <div class="total">
+        Total: R$ <span id="total">0.00</span>
+    </div>
+
+    <div class="cliente">
+        <input type="text" id="nome" placeholder="Nome do Cliente">
+        <input type="number" id="mesa" placeholder="Número da Mesa" min="1">
+        <input type="text" id="endereco" placeholder="Endereço (opcional)">
+    </div>
+
+    <button onclick="enviarPedido()" class="btn-whatsapp">
+        Enviar Pedido no WhatsApp
+    </button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
