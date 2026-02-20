@@ -174,7 +174,7 @@ function enviarPedido() {
 
     mensagem += `\n\nTotal: R$ ${document.getElementById("total").innerText}`;
 
-    const numeroWhatsApp = "5518997672994";
+    const numeroWhatsApp = "5518991645859";
     const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
 
     window.open(url, "_blank");
@@ -195,4 +195,5 @@ function enviarPedido() {
     document.getElementById("mesa").value = "";
     document.getElementById("endereco").value = "";
 }
+
 
