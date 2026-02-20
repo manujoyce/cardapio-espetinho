@@ -19,7 +19,7 @@ const espetos = [
     { nome: "Costela", preco: 10 },
     { nome: "Linguiça com Pimenta", preco: 8 },
     { nome: "Linguiça Tradicional", preco: 8 },
-    { nome: "Pão de Alho", preco: 10 },
+    { nome: "Pão de Alho", preco: 8 },
     { nome: "Queijo", preco: 10 },
     { nome: "Mandioca", preco: 4 },
     { nome: "Baguete", preco: 18 }
@@ -195,3 +195,4 @@ function enviarPedido() {
     document.getElementById("mesa").value = "";
     document.getElementById("endereco").value = "";
 }
+
