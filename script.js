@@ -22,7 +22,7 @@ const espetos = [
     { nome: "Pão de Alho", preco: 8 },
     { nome: "Queijo", preco: 10 },
     { nome: "Mandioca", preco: 4 },
-    { nome: "Kafta com queijo", preco: 12 }
+    { nome: "Kafta com queijo", preco: 12 },
     { nome: "Kafta sem queijo", preco: 12 }
 ];
 
