@@ -22,7 +22,8 @@ const espetos = [
     { nome: "Pão de Alho", preco: 8 },
     { nome: "Queijo", preco: 10 },
     { nome: "Mandioca", preco: 4 },
-    { nome: "Baguete", preco: 18 }
+    { nome: "Kafta com queijo", preco: 12 }
+    { nome: "Kafta sem queijo", preco: 12 }
 ];
 
 const porcoes = [
@@ -174,7 +175,7 @@ function enviarPedido() {
 
     mensagem += `\n\nTotal: R$ ${document.getElementById("total").innerText}`;
 
-    const numeroWhatsApp = "5518991645859";
+    const numeroWhatsApp = "5518991925345";
     const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
 
     window.open(url, "_blank");
@@ -195,5 +196,6 @@ function enviarPedido() {
     document.getElementById("mesa").value = "";
     document.getElementById("endereco").value = "";
 }
+
 
 
