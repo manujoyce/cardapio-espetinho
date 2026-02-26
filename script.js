@@ -19,11 +19,11 @@ const espetos = [
     { nome: "Costela", preco: 10 },
     { nome: "Linguiça com Pimenta", preco: 8 },
     { nome: "Linguiça Tradicional", preco: 8 },
-    { nome: "Pão de Alho", preco: 8 },
+    { nome: "Pão de Alho", preco: 10 },
     { nome: "Queijo", preco: 10 },
     { nome: "Mandioca", preco: 4 },
     { nome: "Kafta com queijo", preco: 12 },
-    { nome: "Kafta sem queijo", preco: 12 }
+    { nome: "Kafta sem queijo", preco: 12}
 ];
 
 const porcoes = [
@@ -100,6 +100,7 @@ function atualizarJantinhas() {
                 <p>R$ ${precoJantinha.toFixed(2)}</p>
                 <p class="descricao">
                     Acompanha: arroz, salada, mandioca, farofa, molho + 1 espeto incluso.
+                    Obs: espeto de Kafta tem um adicional de R$ 2,00.
                 </p>
                 <button class="btn-jantinha" onclick="adicionarJantinha()">+ Adicionar Jantinha</button>
 
@@ -132,11 +133,18 @@ function atualizarTotal() {
         total += carrinho[item.nome] * item.preco;
     });
 
-    total += jantinhas.length * precoJantinha;
+    jantinhas.forEach(espeto => {
+        let precoFinal = precoJantinha;
+
+        if (espeto && espeto.toLowerCase().includes("kafta")) {
+            precoFinal += 2;
+        }
+
+        total += precoFinal;
+    });
 
     document.getElementById("total").innerText = total.toFixed(2);
 }
-
 function enviarPedido() {
 
     const nome = document.getElementById("nome").value.trim();
@@ -175,7 +183,7 @@ function enviarPedido() {
 
     mensagem += `\n\nTotal: R$ ${document.getElementById("total").innerText}`;
 
-    const numeroWhatsApp = "5518991925345";
+    const numeroWhatsApp = "5518997672994";
     const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
 
     window.open(url, "_blank");
@@ -196,6 +204,7 @@ function enviarPedido() {
     document.getElementById("mesa").value = "";
     document.getElementById("endereco").value = "";
 }
+
 
 
 
